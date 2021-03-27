@@ -10,6 +10,8 @@
     <!-- Define your beans here -->
     <bean id="cricketCoach" class="com.example.start01.CricketCoach"></bean>
     
+    <bean id="basketBallCoach" class="com.example.start01.BasketBallCoach"></bean>
+    
 </beans>
 
 

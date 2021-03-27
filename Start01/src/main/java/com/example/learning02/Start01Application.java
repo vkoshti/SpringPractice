@@ -11,7 +11,7 @@ public class Start01Application {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext config = 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach coach = config.getBean("cricketCoach", Coach.class);
+		Coach coach = config.getBean("basketBallCoach", Coach.class);
 		System.out.println("Daily work out: "+ coach.dailyWorkout());
 	}
 
