@@ -12,6 +12,12 @@
     
     <bean id="basketBallCoach" class="com.example.start01.BasketBallCoach"></bean>
     
+    <bean id="fortuneService" class="com.example.start01.di.HappyFortuneService"></bean>
+    
+    <bean id="footBallCoach" class="com.example.start01.di.FootBallCoach">
+    	<constructor-arg ref="fortuneService"></constructor-arg>
+    </bean>
+    
 </beans>
 
 

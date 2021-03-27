@@ -1,6 +1,6 @@
 package com.example.start01;
 
-import com.example.start01.defination.Coach;
+import com.example.start01.definition.Coach;
 
 public class CricketCoach implements Coach{
 
