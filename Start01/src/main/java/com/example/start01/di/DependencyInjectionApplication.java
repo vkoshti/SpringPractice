@@ -12,9 +12,9 @@ public class DependencyInjectionApplication {
 		ClassPathXmlApplicationContext config = 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		FootBallCoach footBallCoach = config.getBean("footBallCoach", FootBallCoach.class);
+		NewCoach footBallCoach = config.getBean("footBallCoach", NewCoach.class);
 		
 		System.out.println("Football Daily Workout : "+ footBallCoach.dailyWorkout());
-		System.out.println("Today's fortune : "+ footBallCoach.getFortune());
+		System.out.println("Today's fortune : "+ footBallCoach.getDailyFortune());
 	}
 }

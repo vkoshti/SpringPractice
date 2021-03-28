@@ -7,16 +7,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define your beans here -->
+    <!-- My beans list goes here -->
+    <!-- Cricket Coach Bean -->
     <bean id="cricketCoach" class="com.example.start01.CricketCoach"></bean>
     
+    <!-- Basket Ball Coach Bean -->
     <bean id="basketBallCoach" class="com.example.start01.BasketBallCoach"></bean>
     
-    <bean id="fortuneService" class="com.example.start01.di.HappyFortuneService"></bean>
-    
+    <!-- Example of constructor dependency injection -->
     <bean id="footBallCoach" class="com.example.start01.di.FootBallCoach">
     	<constructor-arg ref="fortuneService"></constructor-arg>
     </bean>
+    
+    <!-- Even if we reference the bean before defining, it works -->
+    <bean id="fortuneService" class="com.example.start01.di.HappyFortuneService"></bean>
     
 </beans>
 
