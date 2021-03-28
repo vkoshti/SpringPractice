@@ -22,6 +22,10 @@
     <!-- Even if we reference the bean before defining, it works -->
     <bean id="fortuneService" class="com.example.start01.di.HappyFortuneService"></bean>
     
+    <bean id="hockeyCoach" class="com.example.start01.di.HockeyCoach">
+    	<property name="fortuneService" ref="fortuneService"></property>
+    </bean>
+    
 </beans>
 
 
