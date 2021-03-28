@@ -16,6 +16,7 @@ public class Start01Application {
 		//Get a bean by passing the unique object identifier
 		Coach coach = config.getBean("basketBallCoach", Coach.class);
 		System.out.println("Daily work out: "+ coach.dailyWorkout());
+		config.close();
 	}
 
 }

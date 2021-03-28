@@ -16,5 +16,6 @@ public class DependencyInjectionApplication {
 		
 		System.out.println("Football Daily Workout : "+ footBallCoach.dailyWorkout());
 		System.out.println("Today's fortune : "+ footBallCoach.getDailyFortune());
+		config.close();
 	}
 }
