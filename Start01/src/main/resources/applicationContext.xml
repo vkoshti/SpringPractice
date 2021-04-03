@@ -37,6 +37,7 @@
     
     <!-- Pass literal values to setter methods via properties file -->
     <bean id="vollyballCoach" class="com.example.start01.di.VollyballCoach">
+    	<constructor-arg ref="fortuneService" name="fortuneService"></constructor-arg>
     	<property name="coachName" value="${sport.team}"></property>
     	<property name="coachEmail" value="${sport.email}"></property>
     </bean>
