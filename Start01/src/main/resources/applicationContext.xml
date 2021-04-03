@@ -6,6 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Define properties file -->
+	<context:property-placeholder location="classpath:sports.properties"/>
 
     <!-- My beans list goes here -->
     <!-- Cricket Coach Bean -->
@@ -24,6 +27,18 @@
     
     <bean id="hockeyCoach" class="com.example.start01.di.HockeyCoach">
     	<property name="fortuneService" ref="fortuneService"></property>
+    </bean>
+    
+    <!-- Pass literal values to setter methods -->
+    <bean id="chessCoach" class="com.example.start01.di.ChessCoach">
+    	<property name="coachName" value="Simon"></property>
+    	<property name="coachEmail" value="simon@gmail.com"></property>
+    </bean>
+    
+    <!-- Pass literal values to setter methods via properties file -->
+    <bean id="vollyballCoach" class="com.example.start01.di.VollyballCoach">
+    	<property name="coachName" value="${sport.team}"></property>
+    	<property name="coachEmail" value="${sport.email}"></property>
     </bean>
     
 </beans>
