@@ -6,12 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <!-- Define your beans here -->
-    <bean id="cricketCoach" class="com.example.start01.CricketCoach"></bean>
-    
-    <bean id="basketBallCoach" class="com.example.start01.BasketBallCoach"></bean>
-    
+	<!-- Component scan -->
+	
+	<context:component-scan base-package="com.example.springbeanscope"/>
 </beans>
 
 
